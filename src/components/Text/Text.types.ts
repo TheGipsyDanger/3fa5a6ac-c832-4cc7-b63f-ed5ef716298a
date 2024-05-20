@@ -6,6 +6,7 @@ import {HTMLProps} from 'react';
 export namespace IText {
   export interface IView extends withChildren {
     variants?: keyof IFontSizes;
+    'data-testid'?: string;
     className?: HTMLProps<HTMLElement>['className'];
   }
   export interface IModelProps {}
