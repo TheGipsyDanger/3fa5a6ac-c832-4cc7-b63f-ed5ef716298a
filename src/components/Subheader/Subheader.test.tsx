@@ -41,5 +41,7 @@ describe('Render Subheader', () => {
 
     const newOutlineElements = getAllByTestId(`Button:Outline`);
     expect(newOutlineElements).toHaveLength(7);
+
+    fireEvent.click(newDefaultElements[0]);
   });
 });
