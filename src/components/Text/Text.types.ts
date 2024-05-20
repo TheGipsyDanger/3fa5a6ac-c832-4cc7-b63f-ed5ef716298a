@@ -1,12 +1,12 @@
-import { withChildren } from "@/utils";
-import { IFontSizes } from "@/styles";
+import {withChildren} from '@/utils';
+import {IFontSizes} from '@/styles';
 
-import { HTMLProps } from "react";
+import {HTMLProps} from 'react';
 
 export namespace IText {
   export interface IView extends withChildren {
     variants?: keyof IFontSizes;
-    className?: HTMLProps<HTMLElement>["className"];
+    className?: HTMLProps<HTMLElement>['className'];
   }
   export interface IModelProps {}
   export interface IModel {}

@@ -1,1 +1,1 @@
-export type withChildren<T = {}> = T & { children?: React.ReactNode };
+export type withChildren<T = {}> = T & {children?: React.ReactNode};

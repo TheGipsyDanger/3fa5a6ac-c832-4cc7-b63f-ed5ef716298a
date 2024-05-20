@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import { IText } from "./Text.types";
-import { theme } from "@/styles";
+import styled, {css} from 'styled-components';
+import {IText} from './Text.types';
+import {theme} from '@/styles';
 
 const variantsText = {
   small: css`
@@ -19,6 +19,6 @@ const variantsText = {
 
 export default {
   Text: styled.span<IText.ITextStyle>`
-    ${({ variants }) => variantsText[variants as keyof typeof variantsText]};
+    ${({variants}) => variantsText[variants as keyof typeof variantsText]};
   `,
 };
