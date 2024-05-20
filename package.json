@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.5",
-    "axios": "^1.7.1",
     "next": "14.2.3",
     "plop": "^4.0.1",
     "react": "^18",
