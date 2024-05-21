@@ -15,12 +15,22 @@ export const AnimeCard = (props: IAnimeCard.IView) => {
         className=" h-[270px] w-[317px] rounded-t-lg"
       />
       <S.Content>
-        <Text variants="large" className="text-white font-bold">
-          {data?.title?.english}
-        </Text>
-        <S.Average averageScore={data?.averageScore}>
-          <Text variants="large" className="text-white">
-            {data?.averageScore}
+        <S.Infos>
+          <Text
+            data-testid="AnimeCard-title"
+            variants="large"
+            className="text-white font-bold"
+          >
+            {data?.title?.english || data?.title?.native}
+          </Text>
+        </S.Infos>
+        <S.Average averageScore={Number(data?.averageScore)}>
+          <Text
+            data-testid="AnimeCard-averageScore"
+            variants="large"
+            className="text-white"
+          >
+            {data?.averageScore}%
           </Text>
         </S.Average>
       </S.Content>
