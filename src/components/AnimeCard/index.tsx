@@ -26,7 +26,7 @@ export const AnimeCard = (props: IAnimeCard.IView) => {
         </S.Infos>
         <S.Average averageScore={Number(data?.averageScore)}>
           <Text
-            data-testid="AnimeCard-averageScore"
+            data-testid="AnimeCard-average"
             variants="large"
             className="text-white"
           >
