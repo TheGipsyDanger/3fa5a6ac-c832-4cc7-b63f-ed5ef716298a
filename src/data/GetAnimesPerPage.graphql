@@ -6,6 +6,7 @@ query getAnimesPerPage($page: Int, $perPage: Int) {
     }
     media {
       id
+      averageScore
       coverImage {
         large
       }
