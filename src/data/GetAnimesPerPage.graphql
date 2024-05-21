@@ -1,7 +1,6 @@
 query getAnimesPerPage($page: Int, $perPage: Int) {
   Page(page: $page, perPage: $perPage) {
     pageInfo {
-      total
       currentPage
       hasNextPage
     }
