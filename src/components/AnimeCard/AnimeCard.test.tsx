@@ -17,14 +17,36 @@ describe('Render AnimeCard', () => {
   });
 
   it('Should be AnimeCard a correct info', () => {
-    //@ts-ignore
-    const {getByTestId} = render(<AnimeCard data={mediaMock} />);
+    const {getByTestId, getAllByTestId} = render(
+      //@ts-ignore
+      <AnimeCard data={mediaMock} />
+    );
     const currentElement = getByTestId(`AnimeCard`);
     expect(currentElement).toBeTruthy();
     const currentElementTitle = getByTestId(`AnimeCard-title`);
     expect(currentElementTitle).toBeTruthy();
     expect(currentElementTitle.textContent).toBe('Cowboy Bebop');
-    const currentElementAverage = getByTestId(`AnimeCard-averageScore`);
+    const currentElementAverage = getByTestId(`AnimeCard-average`);
+    expect(currentElementAverage).toBeTruthy();
+    expect(currentElementAverage.textContent).toBe('80%');
+    const tagsElements = getAllByTestId('AnimeCard-tag-title');
+    expect(tagsElements).toHaveLength(3);
+    expect(tagsElements[0].textContent).toBe('Space');
+    expect(tagsElements[1].textContent).toBe('Crime');
+    expect(tagsElements[2].textContent).toBe('Episodic');
+  });
+
+  it('Should be AnimeCard a correct info with media no has english title', () => {
+    const {getByTestId} = render(
+      //@ts-ignore
+      <AnimeCard data={mediaMockWithEmptyEnglishTitle} />
+    );
+    const currentElement = getByTestId(`AnimeCard`);
+    expect(currentElement).toBeTruthy();
+    const currentElementTitle = getByTestId(`AnimeCard-title`);
+    expect(currentElementTitle).toBeTruthy();
+    expect(currentElementTitle.textContent).toBe('カウボーイビバップ');
+    const currentElementAverage = getByTestId(`AnimeCard-average`);
     expect(currentElementAverage).toBeTruthy();
     expect(currentElementAverage.textContent).toBe('80%');
   });
@@ -39,22 +61,7 @@ describe('Render AnimeCard', () => {
     const currentElementTitle = getByTestId(`AnimeCard-title`);
     expect(currentElementTitle).toBeTruthy();
     expect(currentElementTitle.textContent).toBe('カウボーイビバップ');
-    const currentElementAverage = getByTestId(`AnimeCard-averageScore`);
-    expect(currentElementAverage).toBeTruthy();
-    expect(currentElementAverage.textContent).toBe('80%');
-  });
-
-  it('Should be AnimeCard a correct info with media no has english title', () => {
-    const {getByTestId} = render(
-      //@ts-ignore
-      <AnimeCard data={mediaMockWithEmptyEnglishTitle} />
-    );
-    const currentElement = getByTestId(`AnimeCard`);
-    expect(currentElement).toBeTruthy();
-    const currentElementTitle = getByTestId(`AnimeCard-title`);
-    expect(currentElementTitle).toBeTruthy();
-    expect(currentElementTitle.textContent).toBe('カウボーイビバップ');
-    const currentElementAverage = getByTestId(`AnimeCard-averageScore`);
+    const currentElementAverage = getByTestId(`AnimeCard-average`);
     expect(currentElementAverage).toBeTruthy();
     expect(currentElementAverage.textContent).toBe('80%');
   });
@@ -69,7 +76,7 @@ describe('Render AnimeCard', () => {
     const currentElementTitle = getByTestId(`AnimeCard-title`);
     expect(currentElementTitle).toBeTruthy();
     expect(currentElementTitle.textContent).toBe('カウボーイビバップ');
-    const currentElementAverage = getByTestId(`AnimeCard-averageScore`);
+    const currentElementAverage = getByTestId(`AnimeCard-average`);
     expect(currentElementAverage).toBeTruthy();
     expect(currentElementAverage.textContent).toBe('50%');
   });
@@ -84,7 +91,7 @@ describe('Render AnimeCard', () => {
     const currentElementTitle = getByTestId(`AnimeCard-title`);
     expect(currentElementTitle).toBeTruthy();
     expect(currentElementTitle.textContent).toBe('カウボーイビバップ');
-    const currentElementAverage = getByTestId(`AnimeCard-averageScore`);
+    const currentElementAverage = getByTestId(`AnimeCard-average`);
     expect(currentElementAverage).toBeTruthy();
     expect(currentElementAverage.textContent).toBe('75%');
   });
@@ -99,7 +106,7 @@ describe('Render AnimeCard', () => {
     const currentElementTitle = getByTestId(`AnimeCard-title`);
     expect(currentElementTitle).toBeTruthy();
     expect(currentElementTitle.textContent).toBe('カウボーイビバップ');
-    const currentElementAverage = getByTestId(`AnimeCard-averageScore`);
+    const currentElementAverage = getByTestId(`AnimeCard-average`);
     expect(currentElementAverage).toBeTruthy();
     expect(currentElementAverage.textContent).toBe('90%');
   });

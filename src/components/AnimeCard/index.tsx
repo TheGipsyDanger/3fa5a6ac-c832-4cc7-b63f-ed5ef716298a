@@ -27,7 +27,7 @@ export const AnimeCard = (props: IAnimeCard.IView) => {
             {data?.tags?.slice(0, 3).map(item => (
               <S.Tag key={item?.id}>
                 <Text
-                  data-testid="AnimeCard-title"
+                  data-testid="AnimeCard-tag-title"
                   variants="small"
                   className="text-tag-text"
                 >
