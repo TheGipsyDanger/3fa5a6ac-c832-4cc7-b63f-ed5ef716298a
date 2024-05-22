@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#6324C6',
+        tags: '#774DC5',
+        'tag-text': '#E2E5E9',
         success: '#01ADA6',
         regular: '#FFB800',
         poor: '#E92151',

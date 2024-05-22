@@ -10,6 +10,11 @@ query getAnimesPerPage($page: Int, $perPage: Int) {
       coverImage {
         large
       }
+      tags {
+        id
+        name
+        category
+      }
       title {
         english
         native

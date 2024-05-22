@@ -11,6 +11,7 @@ export default {
     border
     border-primary
     items-center
+    hover:opacity-80
   `,
   OutlineContainer: tw.button`
     rounded
@@ -22,5 +23,6 @@ export default {
     border
     border-primary
     items-center
+    hover:opacity-80
   `,
 };

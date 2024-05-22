@@ -23,6 +23,19 @@ export const AnimeCard = (props: IAnimeCard.IView) => {
           >
             {data?.title?.english || data?.title?.native}
           </Text>
+          <S.TagsArea>
+            {data?.tags?.slice(0, 3).map(item => (
+              <S.Tag key={item?.id}>
+                <Text
+                  data-testid="AnimeCard-title"
+                  variants="small"
+                  className="text-tag-text"
+                >
+                  {item?.name}
+                </Text>
+              </S.Tag>
+            ))}
+          </S.TagsArea>
         </S.Infos>
         <S.Average averageScore={Number(data?.averageScore)}>
           <Text

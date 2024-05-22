@@ -7,6 +7,26 @@ export const mediaMock = {
     large:
       'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.png',
   },
+  tags: [
+    {
+      __typename: 'MediaTag',
+      id: 63,
+      name: 'Space',
+      category: 'Setting-Universe',
+    },
+    {
+      __typename: 'MediaTag',
+      id: 648,
+      name: 'Crime',
+      category: 'Theme-Other',
+    },
+    {
+      __typename: 'MediaTag',
+      id: 193,
+      name: 'Episodic',
+      category: 'Technical',
+    },
+  ],
   title: {
     __typename: 'MediaTitle',
     english: 'Cowboy Bebop',
@@ -27,6 +47,26 @@ export const mediaMockWithEmptyEnglishTitle = {
     large:
       'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.png',
   },
+  tags: [
+    {
+      __typename: 'MediaTag',
+      id: 63,
+      name: 'Space',
+      category: 'Setting-Universe',
+    },
+    {
+      __typename: 'MediaTag',
+      id: 648,
+      name: 'Crime',
+      category: 'Theme-Other',
+    },
+    {
+      __typename: 'MediaTag',
+      id: 193,
+      name: 'Episodic',
+      category: 'Technical',
+    },
+  ],
   title: {
     __typename: 'MediaTitle',
     english: '',
@@ -47,6 +87,26 @@ export const mediaMockWithPoorScore = {
     large:
       'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.png',
   },
+  tags: [
+    {
+      __typename: 'MediaTag',
+      id: 63,
+      name: 'Space',
+      category: 'Setting-Universe',
+    },
+    {
+      __typename: 'MediaTag',
+      id: 648,
+      name: 'Crime',
+      category: 'Theme-Other',
+    },
+    {
+      __typename: 'MediaTag',
+      id: 193,
+      name: 'Episodic',
+      category: 'Technical',
+    },
+  ],
   title: {
     __typename: 'MediaTitle',
     english: '',
@@ -67,6 +127,26 @@ export const mediaMockWithRegularScore = {
     large:
       'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.png',
   },
+  tags: [
+    {
+      __typename: 'MediaTag',
+      id: 63,
+      name: 'Space',
+      category: 'Setting-Universe',
+    },
+    {
+      __typename: 'MediaTag',
+      id: 648,
+      name: 'Crime',
+      category: 'Theme-Other',
+    },
+    {
+      __typename: 'MediaTag',
+      id: 193,
+      name: 'Episodic',
+      category: 'Technical',
+    },
+  ],
   title: {
     __typename: 'MediaTitle',
     english: '',
