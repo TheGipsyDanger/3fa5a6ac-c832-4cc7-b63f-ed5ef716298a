@@ -7,7 +7,8 @@ export default {
     py-6
     items-center
     justify-center
-    gap-x-4
+    gap-4
     bg-white
+    flex-wrap
   `,
 };

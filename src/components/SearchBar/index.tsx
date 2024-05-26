@@ -1,12 +1,12 @@
-import {ISearchBar} from '@/components/SearchBar/SearchBar.types';
-import {Button} from '../Button';
+import {ISearchBar} from './SearchBar.types';
+import {Button} from '@/components/Button';
+import S from './SearchBar.styles';
 
 export const SearchBar = (props: ISearchBar.IView) => (
-  <div data-testid={`SearchBar`}>
+  <S.Container data-testid={`SearchBar`}>
     <form>
-      <div className="flex flex-1 justify-center gap-4 mb-6">
-        <input
-          className="border rounded w-full py-2 px-3 h-[38px] text-gray-700 leading-tight focus:outline-none focus:shadow-outline max-w-[1000px]"
+      <S.Content>
+        <S.Input
           data-testid="anime:name"
           type="text"
           placeholder="Procurar por anime..."
@@ -16,7 +16,7 @@ export const SearchBar = (props: ISearchBar.IView) => (
           label={'Burcar'}
           className="h-[38px]"
         />
-      </div>
+      </S.Content>
     </form>
-  </div>
+  </S.Container>
 );

@@ -1,13 +1,29 @@
-import {IButton} from '@/components/Button/Button.types';
+import {Text} from '@/components/Text';
+import Image from 'next/image';
+import {IButton} from './Button.types';
 import S from './Button.styles';
-import {Text} from '../Text';
-export const DefaultFull = ({label, ...rest}: IButton.IView) => (
+import add from '../../../public/add.svg';
+export const DefaultFull = ({label, loading, ...rest}: IButton.IView) => (
   <S.DefaultContainerFull {...rest} data-testid={`Button:DefaultFull`}>
-    <Text
-      className="font-semibold text-white"
-      data-testid={`button-label-${label}`}
-    >
-      {label}
-    </Text>
+    {!loading ? (
+      <>
+        <Image src={add} alt="add icon" height={24} width={24} />
+        <Text
+          variants="big"
+          className="ml-2 font text-white"
+          data-testid={`button-label-${label}`}
+        >
+          {label}
+        </Text>
+      </>
+    ) : (
+      <Text
+        variants="big"
+        className="ml-2 font text-white"
+        data-testid={`button-label-${label}`}
+      >
+        {'Carregando ...'}
+      </Text>
+    )}
   </S.DefaultContainerFull>
 );
