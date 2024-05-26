@@ -9,7 +9,7 @@ query getAnimesPerPage($page: Int, $perPage: Int) {
       format
       averageScore
       coverImage {
-        large
+        medium
       }
       description
       tags {
