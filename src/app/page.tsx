@@ -1,11 +1,13 @@
 'use client';
-import Image from 'next/image';
-
-import {useQuery} from '@apollo/client';
-import {GetAnimesPerPageDocument} from '@/__gql__/graphql';
 import {AnimeList} from '@/components/AnimeList';
-import {error} from 'console';
+import {GlobalWrapper} from '@/components/GlobalWrapper';
+import {SearchBar} from '@/components/SearchBar';
 
 export default function Home() {
-  return <AnimeList />;
+  return (
+    <div data-testid={`Page:Home`} className="flex flex-1 flex-col">
+      <SearchBar />
+      <AnimeList />
+    </div>
+  );
 }

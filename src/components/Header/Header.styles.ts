@@ -9,7 +9,7 @@ export default {
     items-center
     justify-center
   `,
-  ImageContainer: tw.header`
+  ImageContainer: tw.div`
     h-[28px]
     w-[237px]
   `,

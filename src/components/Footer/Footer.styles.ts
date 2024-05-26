@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components';
 
 export default {
-  Container: tw.header`
+  Container: tw.footer`
     flex
     flex-row
     h-[54px]
@@ -10,7 +10,7 @@ export default {
     mt-10
     justify-center
   `,
-  ImageContainer: tw.header`
+  ImageContainer: tw.div`
     h-[34px]
     w-[169px]
   `,

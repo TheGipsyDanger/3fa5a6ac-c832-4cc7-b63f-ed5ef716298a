@@ -19,8 +19,7 @@ export const AnimeCard = (props: IAnimeCard.IView) => {
           <S.Title
             data-testid="AnimeCard-title"
             variants="large"
-            className="text-white font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]
-"
+            className="text-white font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]"
           >
             {data?.title?.english || data?.title?.native}
           </S.Title>
