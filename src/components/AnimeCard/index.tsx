@@ -8,7 +8,7 @@ export const AnimeCard = (props: IAnimeCard.IView) => {
   return (
     <S.Container data-testid={`AnimeCard`}>
       <Image
-        src={String(data?.coverImage?.medium)}
+        src={String(data?.coverImage?.large)}
         alt={`image to ${data?.title?.english}`}
         width="317"
         height="270"
