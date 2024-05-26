@@ -4,9 +4,7 @@ import {useState} from 'react';
 import {useAppDispatch} from '@/utils';
 import {searchSetType} from '@/redux/actions';
 
-export const useSubheader = (
-  props: ISubheader.IModelProps
-): ISubheader.IModel => {
+export const useSubheader = (): ISubheader.IModel => {
   const dispatch = useAppDispatch();
   const [data, setData] = useState<IData[]>([
     {

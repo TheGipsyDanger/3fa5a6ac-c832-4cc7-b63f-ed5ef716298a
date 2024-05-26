@@ -1,5 +1,5 @@
 import {IHeader} from './Header.types';
 
-export const useHeader = (props: IHeader.IModelProps): IHeader.IModel => {
+export const useHeader = (): IHeader.IModel => {
   return {};
 };

@@ -1,8 +1,7 @@
-import {IHeader} from './Header.types';
 import S from './Header.styles';
 import Image from 'next/image';
 import headerImg from '../../../public/header_img.png';
-export const Header = (props: IHeader.IView) => (
+export const Header = () => (
   <S.Container data-testid={`Header`}>
     <S.ImageContainer>
       <Image

@@ -1,9 +1,8 @@
-import {ISearchBar} from './SearchBar.types';
 import {Button} from '@/components/Button';
 import S from './SearchBar.styles';
 import {useSearchBar} from './SearchBar.model';
 
-export const SearchBar = (props: ISearchBar.IView) => {
+export const SearchBar = () => {
   const {onSubmit, inputValue, handleInputChange} = useSearchBar({});
   return (
     <S.Container data-testid={`SearchBar`}>

@@ -1,11 +1,9 @@
 import {useAppDispatch, useAppSelector} from './../../utils/redux/index';
 import {searchSetQuery} from '@/redux/actions';
 import {ISearchBar} from './SearchBar.types';
-import {ChangeEvent, useState} from 'react';
+import {ChangeEvent} from 'react';
 
-export const useSearchBar = (
-  props: ISearchBar.IModelProps
-): ISearchBar.IModel => {
+export const useSearchBar = (): ISearchBar.IModel => {
   const dispatch = useAppDispatch();
 
   const {query} = useAppSelector(state => state.Search);

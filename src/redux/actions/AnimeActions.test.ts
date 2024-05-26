@@ -3,7 +3,6 @@ import {
   IRequestAnimeList,
   IResponseAnimeList,
 } from './AnimeActions';
-import {GetAnimesPerPageQuery} from '@/__gql__/graphql';
 
 describe('animeListActions', () => {
   it('should create the correct request action', () => {

@@ -1,4 +1,4 @@
-import {Page, Media} from './../../__gql__/graphql';
+import {Media} from './../../__gql__/graphql';
 import {IResponseAnimeList} from '@/redux/actions/AnimeActions';
 import {createSlice} from '@reduxjs/toolkit';
 

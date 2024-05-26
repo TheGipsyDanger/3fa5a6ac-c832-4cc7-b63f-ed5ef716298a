@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from '@testing-library/react';
-import styled, {ThemeProvider as StyledThemeProvider} from 'styled-components';
+import styled from 'styled-components';
 import {ThemeProvider, theme} from './theme';
 
 const TestComponent = styled.div`

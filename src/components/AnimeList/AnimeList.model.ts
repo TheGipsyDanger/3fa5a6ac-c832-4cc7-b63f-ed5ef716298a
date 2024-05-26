@@ -7,9 +7,7 @@ import {GetAnimesPerPageQuery} from '@/__gql__/graphql';
 
 const PER_PAGE = 32;
 
-export const useAnimeList = (
-  props: IAnimeList.IModelProps
-): IAnimeList.IModel => {
+export const useAnimeList = (): IAnimeList.IModel => {
   const dispatch = useAppDispatch();
 
   const {query, type} = useAppSelector(state => state.Search);

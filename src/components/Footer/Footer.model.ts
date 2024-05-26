@@ -1,5 +1,5 @@
 import {IFooter} from './Footer.types';
 
-export const useFooter = (props: IFooter.IModelProps): IFooter.IModel => {
+export const useFooter = (): IFooter.IModel => {
   return {};
 };

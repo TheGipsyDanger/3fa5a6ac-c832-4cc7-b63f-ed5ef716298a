@@ -1,9 +1,8 @@
-import {IFooter} from './Footer.types';
 import Image from 'next/image';
 import S from './Footer.styles';
 import footerImg from '../../../public/footer_img.png';
 
-export const Footer = (props: IFooter.IView) => (
+export const Footer = () => (
   <S.Container data-testid={`Footer`}>
     <S.ImageContainer>
       <Image
