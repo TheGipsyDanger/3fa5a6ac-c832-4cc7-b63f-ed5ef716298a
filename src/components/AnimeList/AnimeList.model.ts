@@ -1,16 +1,29 @@
 import {IAnimeList} from '@/components/AnimeList/AnimeList.types';
-import {useQuery} from '@apollo/client';
-import {GetAnimesPerPageDocument} from '@/__gql__/graphql';
+import {useEffect} from 'react';
+import {useAppDispatch, useAppSelector} from '@/utils';
+import {animeListActions} from '@/redux/actions';
+
+const PER_PAGE = 32;
+
 export const useAnimeList = (
   props: IAnimeList.IModelProps
 ): IAnimeList.IModel => {
-  const {data, loading, error} = useQuery(GetAnimesPerPageDocument, {
-    variables: {page: 1, perPage: 32},
-  });
+  const dispatch = useAppDispatch();
+
+  const {data, isLoading, error} = useAppSelector(state => state.Anime);
+
+  useEffect(() => {
+    dispatch(animeListActions.request({page: 1, perPage: PER_PAGE}));
+  }, []);
+
+  const showMore = (page: number) => {
+    dispatch(animeListActions.request({page, perPage: PER_PAGE}));
+  };
 
   return {
     data: data?.Page,
-    loading,
+    loading: isLoading,
     error,
+    showMore,
   };
 };

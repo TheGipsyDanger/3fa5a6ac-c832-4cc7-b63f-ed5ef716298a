@@ -6,6 +6,7 @@ export namespace IAnimeList {
   export interface IModel {
     data: GetAnimesPerPageQuery['Page'] | undefined;
     loading: boolean;
-    error: ApolloError | undefined;
+    error: ApolloError | string;
+    showMore: (page: number) => void;
   }
 }
