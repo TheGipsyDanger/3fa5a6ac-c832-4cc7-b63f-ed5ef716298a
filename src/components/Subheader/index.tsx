@@ -1,11 +1,10 @@
 'use client';
-import {ISubheader} from './Subheader.types';
 import S from './Subheader.styles';
 import {useSubheader} from './Subheader.model';
 import {Button} from '../Button';
 
-export const Subheader = (props: ISubheader.IView) => {
-  const {data, handleClick} = useSubheader(props);
+export const Subheader = () => {
+  const {data, handleClick} = useSubheader();
 
   return (
     <S.Container data-testid={`Subheader`}>

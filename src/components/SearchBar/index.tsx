@@ -3,7 +3,7 @@ import S from './SearchBar.styles';
 import {useSearchBar} from './SearchBar.model';
 
 export const SearchBar = () => {
-  const {onSubmit, inputValue, handleInputChange} = useSearchBar({});
+  const {onSubmit, inputValue, handleInputChange} = useSearchBar();
   return (
     <S.Container data-testid={`SearchBar`}>
       <S.Content>
