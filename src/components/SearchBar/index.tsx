@@ -1,22 +1,26 @@
 import {ISearchBar} from './SearchBar.types';
 import {Button} from '@/components/Button';
 import S from './SearchBar.styles';
+import {useSearchBar} from './SearchBar.model';
 
-export const SearchBar = (props: ISearchBar.IView) => (
-  <S.Container data-testid={`SearchBar`}>
-    <form>
+export const SearchBar = (props: ISearchBar.IView) => {
+  const {onSubmit, inputValue, handleInputChange} = useSearchBar({});
+  return (
+    <S.Container data-testid={`SearchBar`}>
       <S.Content>
         <S.Input
           data-testid="anime:name"
           type="text"
+          value={inputValue}
+          onChange={handleInputChange}
           placeholder="Procurar por anime..."
         />
         <Button.Default
-          onClick={() => {}}
+          onClick={onSubmit}
           label={'Burcar'}
           className="h-[38px]"
         />
       </S.Content>
-    </form>
-  </S.Container>
-);
+    </S.Container>
+  );
+};

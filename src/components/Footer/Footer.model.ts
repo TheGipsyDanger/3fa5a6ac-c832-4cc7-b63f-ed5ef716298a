@@ -1,5 +1,5 @@
-import { IFooter } from '@/components/Footer/Footer.types'
+import {IFooter} from './Footer.types';
 
-export const useFooter = (props: IFooter.IModelProps ): IFooter.IModel => {
-  return {}
-}
+export const useFooter = (props: IFooter.IModelProps): IFooter.IModel => {
+  return {};
+};

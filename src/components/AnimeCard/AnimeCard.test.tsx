@@ -31,9 +31,9 @@ describe('Render AnimeCard', () => {
     expect(currentElementAverage.textContent).toBe('80%');
     const tagsElements = getAllByTestId('AnimeCard-tag-title');
     expect(tagsElements).toHaveLength(3);
-    expect(tagsElements[0].textContent).toBe('Space');
-    expect(tagsElements[1].textContent).toBe('Crime');
-    expect(tagsElements[2].textContent).toBe('Episodic');
+    expect(tagsElements[0].textContent).toBe('Action');
+    expect(tagsElements[1].textContent).toBe('Adventure');
+    expect(tagsElements[2].textContent).toBe('Drama');
   });
 
   it('Should be AnimeCard a correct info with media no has english title', () => {

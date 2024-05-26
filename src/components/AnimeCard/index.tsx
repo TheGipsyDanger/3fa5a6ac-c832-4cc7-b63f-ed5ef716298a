@@ -1,7 +1,7 @@
 import {IAnimeCard} from '@/components/AnimeCard/AnimeCard.types';
 import S from './AnimeCard.styles';
 import Image from 'next/image';
-import {Text} from '../Text';
+import {Text} from '@/components/Text';
 export const AnimeCard = (props: IAnimeCard.IView) => {
   const {data} = props;
 
@@ -24,15 +24,15 @@ export const AnimeCard = (props: IAnimeCard.IView) => {
             {data?.title?.english || data?.title?.native}
           </S.Title>
           <S.TagsArea>
-            {data?.tags?.slice(0, 3).map(item => (
-              <S.Tag key={item?.id}>
-                <Text
+            {data?.genres?.slice(0, 3).map(item => (
+              <S.Tag key={`genre:${item}`}>
+                <S.TagText
                   data-testid="AnimeCard-tag-title"
                   variants="small"
                   className="text-tag-text"
                 >
-                  {item?.name}
-                </Text>
+                  {item}
+                </S.TagText>
               </S.Tag>
             ))}
           </S.TagsArea>

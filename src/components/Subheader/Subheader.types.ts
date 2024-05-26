@@ -2,6 +2,7 @@ export interface IData {
   id: string;
   label: string;
   status: boolean;
+  type: string;
 }
 
 export namespace ISubheader {
@@ -9,6 +10,6 @@ export namespace ISubheader {
   export interface IModelProps {}
   export interface IModel {
     data: IData[];
-    handleClick: (id: string) => void;
+    handleClick: (id: string, type: string) => void;
   }
 }

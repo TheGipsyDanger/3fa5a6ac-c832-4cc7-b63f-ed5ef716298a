@@ -1,5 +1,5 @@
-import { IHeader } from '@/components/Header/Header.types'
+import {IHeader} from './Header.types';
 
-export const useHeader = (props: IHeader.IModelProps ): IHeader.IModel => {
-  return {}
-}
+export const useHeader = (props: IHeader.IModelProps): IHeader.IModel => {
+  return {};
+};

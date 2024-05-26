@@ -6,19 +6,23 @@ query getAnimesPerPage($page: Int, $perPage: Int) {
     }
     media {
       id
+      format
       averageScore
       coverImage {
         large
       }
+      description
       tags {
         id
         name
         category
       }
+      genres
       title {
         english
         native
       }
+      type
       format
       seasonYear
       status

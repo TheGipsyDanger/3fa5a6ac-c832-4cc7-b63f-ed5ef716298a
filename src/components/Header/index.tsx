@@ -1,4 +1,4 @@
-import {IHeader} from '@/components/Header/Header.types';
+import {IHeader} from './Header.types';
 import S from './Header.styles';
 import Image from 'next/image';
 import headerImg from '../../../public/header_img.png';
@@ -10,7 +10,7 @@ export const Header = (props: IHeader.IView) => (
         alt={`image header with buscanime text`}
         width="237"
         height="28"
-        className=" h-[28px] w-[237px] rounded-t-lg"
+        className="h-[28px] w-[237px] rounded-t-lg"
       />
     </S.ImageContainer>
   </S.Container>

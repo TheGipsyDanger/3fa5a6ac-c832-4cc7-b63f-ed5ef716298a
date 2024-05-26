@@ -9,7 +9,7 @@ describe('Render Button', () => {
     expect(currentElement.textContent).toBe('Default');
   });
   it('Should be Button.DefaultFull exist', () => {
-    const {getByTestId} = render(<Button.Outline label={'Outline'} />);
+    const {getByTestId} = render(<Button.DefaultFull label={'Outline'} />);
     const currentElement = getByTestId(`Button:DefaultFull`);
     expect(currentElement).toBeTruthy();
     expect(currentElement.textContent).toBe('Outline');

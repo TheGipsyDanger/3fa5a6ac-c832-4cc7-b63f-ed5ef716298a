@@ -1,4 +1,4 @@
-import {IFooter} from '@/components/Footer/Footer.types';
+import {IFooter} from './Footer.types';
 import Image from 'next/image';
 import S from './Footer.styles';
 import footerImg from '../../../public/footer_img.png';

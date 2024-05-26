@@ -2,7 +2,7 @@ import {Page, Media} from './../../__gql__/graphql';
 import {IResponseAnimeList} from '@/redux/actions/AnimeActions';
 import {createSlice} from '@reduxjs/toolkit';
 
-interface IAnimeState {
+export interface IAnimeState {
   isLoading: boolean;
   error: string;
   data: IResponseAnimeList['data'];

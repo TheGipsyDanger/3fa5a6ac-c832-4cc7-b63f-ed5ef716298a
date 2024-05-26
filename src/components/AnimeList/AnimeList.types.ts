@@ -4,7 +4,8 @@ export namespace IAnimeList {
   export interface IView {}
   export interface IModelProps {}
   export interface IModel {
-    data: GetAnimesPerPageQuery['Page'] | undefined;
+    page: GetAnimesPerPageQuery['Page'] | undefined;
+    media: NonNullable<NonNullable<GetAnimesPerPageQuery['Page']>['media']>;
     loading: boolean;
     error: ApolloError | string;
     showMore: (page: number) => void;

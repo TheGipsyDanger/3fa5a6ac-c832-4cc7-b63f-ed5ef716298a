@@ -1,4 +1,4 @@
-import {IButton} from '@/components/Button/Button.types';
+import {IButton} from './Button.types';
 import S from './Button.styles';
 import {Text} from '../Text';
 export const Default = ({label, ...rest}: IButton.IView) => (

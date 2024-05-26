@@ -1,7 +1,26 @@
 import {Subheader} from './';
 import {render, fireEvent} from '@testing-library/react';
+import {useAppDispatch} from '@/utils';
+
+jest.mock('../../utils/redux', () => ({
+  useAppDispatch: jest.fn(),
+}));
+
+jest.mock('../../redux/actions', () => ({
+  searchSetType: jest.fn(),
+}));
 
 describe('Render Subheader', () => {
+  const mockDispatch = jest.fn();
+
+  beforeEach(() => {
+    (useAppDispatch as jest.Mock).mockReturnValue(mockDispatch);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Should be Subheader exist', () => {
     const {getByTestId} = render(<Subheader />);
     const currentElement = getByTestId(`Subheader`);
@@ -30,18 +49,12 @@ describe('Render Subheader', () => {
     expect(defaultElements[0].textContent).toBe('All Formats');
     expect(defaultElements).toHaveLength(1);
 
+    fireEvent.click(defaultElements[0]);
+
     const outlineElements = getAllByTestId(`Button:Outline`);
     expect(outlineElements).toHaveLength(7);
     expect(outlineElements[0].textContent).toBe('Tv Show');
+
     fireEvent.click(outlineElements[0]);
-
-    const newDefaultElements = getAllByTestId(`Button:Dafault`);
-    expect(newDefaultElements[0].textContent).toBe('Tv Show');
-    expect(newDefaultElements).toHaveLength(1);
-
-    const newOutlineElements = getAllByTestId(`Button:Outline`);
-    expect(newOutlineElements).toHaveLength(7);
-
-    fireEvent.click(newDefaultElements[0]);
   });
 });

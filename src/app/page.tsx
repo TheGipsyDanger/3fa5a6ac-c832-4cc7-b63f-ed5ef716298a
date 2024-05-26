@@ -1,6 +1,5 @@
 'use client';
 import {AnimeList} from '@/components/AnimeList';
-import {GlobalWrapper} from '@/components/GlobalWrapper';
 import {SearchBar} from '@/components/SearchBar';
 
 export default function Home() {

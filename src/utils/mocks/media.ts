@@ -7,6 +7,7 @@ export const mediaMock = {
     large:
       'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.png',
   },
+  genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi'],
   tags: [
     {
       __typename: 'MediaTag',
@@ -47,6 +48,7 @@ export const mediaMockWithEmptyEnglishTitle = {
     large:
       'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.png',
   },
+  genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi'],
   tags: [
     {
       __typename: 'MediaTag',
@@ -87,6 +89,7 @@ export const mediaMockWithPoorScore = {
     large:
       'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.png',
   },
+  genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi'],
   tags: [
     {
       __typename: 'MediaTag',
@@ -127,6 +130,7 @@ export const mediaMockWithRegularScore = {
     large:
       'https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1-CXtrrkMpJ8Zq.png',
   },
+  genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi'],
   tags: [
     {
       __typename: 'MediaTag',
@@ -162,6 +166,7 @@ export const mediaMockWithSuccessScore = {
   __typename: 'Media',
   id: 1,
   averageScore: 90,
+  genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi'],
   coverImage: {
     __typename: 'MediaCoverImage',
     large:

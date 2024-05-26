@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components';
 import styled from 'styled-components';
-import {Text} from '../Text';
+import {Text} from '@/components/Text';
 
 interface IAverage {
   averageScore: number;
@@ -46,6 +46,9 @@ export default {
     py-1
     px-2
     rounded
+  `,
+  TagText: tw(Text)`
+    text-tag-text
   `,
   Average: tw.div<IAverage>`
     self-end
