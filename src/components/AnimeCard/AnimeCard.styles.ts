@@ -1,4 +1,6 @@
 import tw from 'tailwind-styled-components';
+import styled from 'styled-components';
+import {Text} from '../Text';
 
 interface IAverage {
   averageScore: number;
@@ -54,5 +56,11 @@ export default {
     ${p => p.averageScore <= 50 && 'bg-poor'}
     ${p => p.averageScore > 50 && p.averageScore <= 80 && 'bg-regular'}
     ${p => p.averageScore > 80 && 'bg-success'}
+  `,
+  Title: styled(Text)`
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
   `,
 };

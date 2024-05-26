@@ -16,13 +16,14 @@ export const AnimeCard = (props: IAnimeCard.IView) => {
       />
       <S.Content>
         <S.Infos>
-          <Text
+          <S.Title
             data-testid="AnimeCard-title"
             variants="large"
-            className="text-white font-bold"
+            className="text-white font-bold drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]
+"
           >
             {data?.title?.english || data?.title?.native}
-          </Text>
+          </S.Title>
           <S.TagsArea>
             {data?.tags?.slice(0, 3).map(item => (
               <S.Tag key={item?.id}>
